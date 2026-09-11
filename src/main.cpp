@@ -21,7 +21,7 @@ void loop() {
 		delay(PWM_STEP_DELAY_MS);
 		Serial.println(dutyCycle);
 	}
-    delay(1000); // Wait for a second before starting the next loop
+   
 	for (int16_t dutyCycle = PWM_MAX - 1; dutyCycle >= 0; --dutyCycle) {
 		ledcWrite(PWM_CHANNEL, dutyCycle);
 		delay(PWM_STEP_DELAY_MS);
